@@ -3,7 +3,7 @@ from flask import Flask
 
 def create_app(app_type):
 
-    app = Flask(__name__)
+    app = Flask(__name__.split(".")[0])
     if app_type == 'develop':
         app.config.from_object('app.settings.DevelopmentConfig')
     elif app_type == 'test':

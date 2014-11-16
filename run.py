@@ -1,5 +1,11 @@
 '''
-Simple script to run the server in dev mode and to run tests.
+Application runner scripts. Features ...
+1. Wraps around Flask-Script
+2. Includes Flask-Migrate
+
+adds 
+1. testing command
+2. tools to initialize the sample app
 '''
 import unittest
 
@@ -12,13 +18,13 @@ from app import create_app
 app = create_app('develop')
 manager = Manager(app)
 
-# for testing
-@manager.command
-def test():
-    # unittest.main()
-    print("running all tests")
-    from tests import all_tests
-    unittest.TextTestRunner().run(all_tests)
+# This command adds sample data to the DB
+from app.commands import SampleDataCommand
+manager.add_command('sample-data', SampleDataCommand())
+
+# This command runs the tests
+from app.commands import TestingCommand
+manager.add_command('test', TestingCommand)
 
 
 # use flask migrate for DB migarations

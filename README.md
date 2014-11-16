@@ -17,13 +17,13 @@ Blueprints are used for modularity. It also includes the full Zurb Foundation 5 
  
 ### How to use this project ###
 
- 1. Clone to project folder
- 2. use "python run.py runserver" to run you app in development mode
- 3. use "python run.py test" to run your test cases
- 2. Write your models in [project folder]/models
- 3. Write your model tests in [project folder]/tests/models
- 4. Add blueprints to in the root folder. Look at [project folder]/home for examples
- 5. Write templates which extend from base.html for foundation 5 look and feel
+#### Quick Start ####
+
+Refer docs/QUICKSTART.md
+
+#### First steps to writing your own app ####
+
+Refer docs/TUTORIAL.md
 
 ### TODO ###
 
