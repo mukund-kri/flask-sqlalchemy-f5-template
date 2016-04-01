@@ -1,0 +1,9 @@
+{
+  "full_name": "Mukund Krishnamurthy",
+  "email": "mukund@gmail.com",
+  "github_username": "mukund_kri",
+  "project_name": "Your project name",
+  "app_name": "flaskapp",
+  "project_short_description": "Flask app with SqlAlchemy and foundation 5"
+}
+
